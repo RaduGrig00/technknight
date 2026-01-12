@@ -13,7 +13,6 @@
     
     <link rel="canonical" href="https://techknight.it/" />
     
-
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://techknight.it/" />
     <meta property="og:title" content="TechKnight | Sviluppatore Web Freelance" />
@@ -24,14 +23,12 @@
     <meta property="og:locale" content="it_IT" />
     <meta property="og:site_name" content="TechKnight" />
     
-
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://techknight.it/" />
     <meta name="twitter:title" content="TechKnight | Sviluppatore Web Freelance" />
     <meta name="twitter:description" content="Sviluppatore web freelance specializzato nella creazione di siti web moderni, e-commerce e consulenza informatica." />
     <meta name="twitter:image" content="https://techknight.it/og-image.jpg" />
     
-
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -39,15 +36,32 @@
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#0a0a0b" />
     
-
     <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
     <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" as="style" />
     <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" />
     
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBBVY2DZSW"></script>
+    <!-- ============================================
+         GOOGLE CONSENT MODE V2 - BLOCCA GA DI DEFAULT
+         Analytics viene attivato SOLO dopo consenso
+    ============================================= -->
     <script>
+      // Consent Mode: default DENIED (GDPR compliant)
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      
+      // Imposta default PRIMA di caricare GA
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBBVY2DZSW"></script>
+    <script>
       gtag('js', new Date());
       gtag('config', 'G-VBBVY2DZSW', {
         'anonymize_ip': true,
@@ -56,7 +70,6 @@
       });
     </script>
     
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -82,7 +95,6 @@
       }
     }
     </script>
-
 
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
