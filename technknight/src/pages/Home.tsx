@@ -39,8 +39,7 @@ const COOKIE_CONSENT_KEY = "techknight_cookie_consent";
 const sanitizeInput = (input: string): string =>
   input
     .replace(/<[^>]*>/g, "")
-    .replace(/[<>]/g, "")
-    .trim();
+    .replace(/[<>]/g, "");
 
 declare global {
   interface Window {
@@ -633,11 +632,11 @@ const HomePage = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: sanitizeInput(formData.name),
-          email: sanitizeInput(formData.email).toLowerCase(),
+          name: sanitizeInput(formData.name).trim(),
+          email: sanitizeInput(formData.email).toLowerCase().trim(),
           budget: formData.budget,
-          message: sanitizeInput(formData.message),
-          _subject: `Nuovo contatto da ${sanitizeInput(formData.name)}`,
+          message: sanitizeInput(formData.message).trim(),
+          _subject: `Nuovo contatto da ${sanitizeInput(formData.name).trim()}`,
         }),
       });
       if (response.ok) {
