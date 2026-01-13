@@ -1,0 +1,19 @@
+# robots.txt per techknight.it
+# Sviluppatore Web Freelance - Siti Web, E-commerce, Gestionali
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://techknight.it/sitemap.xml
+
+# Blocca risorse non necessarie
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/
+Disallow: /*.json$
+
+# Consenti immagini per Google Images
+User-agent: Googlebot-Image
+Allow: /projects/
+Allow: /og-image.jpg
